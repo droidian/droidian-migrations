@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+configure() {
+	# Droidian 100: migration to phosh-osk-stub
+	runonce-queue droidian-100-phosh-osk-stub
+}
+
+case "$1" in
+	"configure")
+		configure
+		;;
+esac

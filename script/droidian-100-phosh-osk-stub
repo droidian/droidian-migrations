@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Droidian 100 migrates to phosh-osk-stub from
+# squeekboard.
+
+update-alternatives \
+	--set Phosh-OSK /usr/share/phosh-osk-stub/sm.puri.Phosh.OskStub.desktop
+
+# We don't really care if unsuccessful
+exit 0
