@@ -3,7 +3,7 @@ set -e
 
 configure() {
 	# Droidian 100: migration to phosh-osk-stub
-	runonce-queue droidian-100-phosh-osk-stub
+	runonce-queue droidian-100-phosh-osk-stub 101
 }
 
 case "$1" in

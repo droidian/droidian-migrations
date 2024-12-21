@@ -2,9 +2,12 @@
 
 # Droidian 100 migrates to phosh-osk-stub from
 # squeekboard.
+#
+# On Droidian 101, the alternative has changed, so
+# we need to re-force it again
 
 update-alternatives \
-	--set Phosh-OSK /usr/share/phosh-osk-stub/sm.puri.Phosh.OskStub.desktop
+	--set Phosh-OSK /usr/share/phosh-osk-stub/mobi.phosh.OskStub.desktop
 
 # We don't really care if unsuccessful
 exit 0
