@@ -4,6 +4,9 @@ set -e
 configure() {
 	# Droidian 100: migration to phosh-osk-stub
 	runonce-queue droidian-100-phosh-osk-stub 101
+
+	# Droidian 101: chatty desktop file has been renamed
+	runonce-queue droidian-101-chatty 101
 }
 
 case "$1" in

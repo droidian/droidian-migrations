@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# On Droidian 101, the .desktop file of chatty
+# changed to "sm.puri.chatty.desktop" (with "chatty"
+# being lowercased).
+# If the user has Chatty among their favourites,
+# ensure it gets properly updated
+
+gsettings set \
+	sm.puri.phosh \
+	favorites \
+	"$(gsettings get sm.puri.phosh favorites | sed -e 's|sm.puri.Chatty.desktop|sm.puri.chatty.desktop|g')"
+
+# We don't really care if unsuccessful
+exit 0
