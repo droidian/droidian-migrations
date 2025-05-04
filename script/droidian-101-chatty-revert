@@ -5,11 +5,16 @@
 # being lowercased).
 # If the user has Chatty among their favourites,
 # ensure it gets properly updated
+#
+# On Debian 20250504T091840Z, this change has
+# been reverted, so there is no change when coming
+# from Droidian 100. But we should revert it for
+# people that were already on next.
 
 gsettings set \
 	sm.puri.phosh \
 	favorites \
-	"$(gsettings get sm.puri.phosh favorites | sed -e 's|sm.puri.Chatty.desktop|sm.puri.chatty.desktop|g')"
+	"$(gsettings get sm.puri.phosh favorites | sed -e 's|sm.puri.chatty.desktop|sm.puri.Chatty.desktop|g')"
 
 # We don't really care if unsuccessful
 exit 0
