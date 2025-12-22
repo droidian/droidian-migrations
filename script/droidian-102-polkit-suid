@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Droidian 102 upgrades polkit to version 127, that uses a
+# socket-activated service to do privilege escalation (awesome!).
+# Due to the wide variety of the devices we support, it is more than likely
+# that pidfd is not supported on the running kernel.
+#
+# Keep setting SUID on the agent helper for this release.
+# Droidian 103 will likely handle this differently, and we will restore the
+# upstream behaviour on supported devices.
+
+systemctl mask polkit-agent-helper.socket
+chown root:root /usr/lib/polkit-1/polkit-agent-helper-1
+chmod 4755 /usr/lib/polkit-1/polkit-agent-helper-1
+
+exit 0

@@ -11,6 +11,9 @@ configure() {
 	# we should properly revert for people that were
 	# on next.
 	runonce-queue droidian-101-chatty-revert 101
+
+	# Droidian 102: restore suid bit on polkit-agent-helper
+	runonce-queue droidian-102-polkit-suid 102
 }
 
 case "$1" in
